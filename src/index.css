@@ -1,13 +1,44 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  height: 30px;
+  background: rgb(0, 255, 85);
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: calc(100vh - 30px);
+}
+
+.model {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  border: 1px solid black;
+}
+
+.speedometer {
+  grid-column: 3;
+  grid-row: 1;
+  border: 1px solid black;
+}
+
+.tachometer {
+  grid-column: 3;
+  grid-row: 2;
+  border: 1px solid black;
+}
+
+.ignition {
+  grid-column: 4;
+  grid-row: 1/3;
+  border: 1px solid black;
 }
