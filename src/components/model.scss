@@ -25,7 +25,28 @@ $speed: 5s;
   transform: translate(-50%, -50%);
 }
 
-// ------ PISTON ------
+// ------ BLOCK ------
+.model__block {
+  position: absolute;
+  // z-index: 1;
+  .b1 {
+    position: absolute;
+    background: brown;
+    width: 20px;
+    height: 200px;
+    left: -94px;
+    top: -220px;
+  }
+  .b2 {
+    position: absolute;
+    background: brown;
+    width: 20px;
+    height: 200px;
+    left: 76px;
+    top: -220px;
+  }
+}
+// ------ END BLOCK ------
 .model__piston {
   z-index: 4;
   position: absolute;
