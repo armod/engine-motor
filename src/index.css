@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fff;
 }
 
 .header {
@@ -17,12 +16,6 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   height: calc(100vh - 30px);
-}
-
-.model {
-  grid-column: 1/3;
-  grid-row: 1/3;
-  border: 1px solid black;
 }
 
 .speedometer {

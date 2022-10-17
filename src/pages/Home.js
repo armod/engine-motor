@@ -11,9 +11,7 @@ const Home = () => {
         <p>Engine Motor Model</p>
       </header>
       <main className='wrapper'>
-        <div className='model'>
-          <Model />
-        </div>
+        <Model />
         <div className='speedometer'>
           <Speedometer />
         </div>
