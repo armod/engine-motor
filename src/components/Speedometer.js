@@ -1,7 +1,13 @@
 import React from 'react'
+import '../components/speedometer.scss'
 
 const Speedometer = () => {
-  return <div>Vehicle Speed (Speedometer)</div>
+  return (
+    <div className='speed'>
+      <p>Vehicle Speed (Speedometer)</p>
+      <div className='speed__wheel'></div>
+    </div>
+  )
 }
 
 export default Speedometer

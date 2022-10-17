@@ -17,12 +17,12 @@
   gap: 10px;
   height: calc(100vh - 30px);
 }
-
+/* 
 .speedometer {
   grid-column: 3;
   grid-row: 1;
   border: 1px solid black;
-}
+} */
 
 .tachometer {
   grid-column: 3;

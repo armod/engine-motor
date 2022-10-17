@@ -1,4 +1,3 @@
-import React from 'react'
 import '../components/model.scss'
 // valve -zawór
 // piston - tłok

@@ -12,9 +12,7 @@ const Home = () => {
       </header>
       <main className='wrapper'>
         <Model />
-        <div className='speedometer'>
-          <Speedometer />
-        </div>
+        <Speedometer />
         <div className='tachometer'>
           <Tachomerter />
         </div>
