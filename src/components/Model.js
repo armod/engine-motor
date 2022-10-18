@@ -17,9 +17,9 @@ const Model = (props) => {
           <div className='b1'></div>
           <div className='b2'></div>
         </div>
-        <div className='model__piston' style={{ animationDuration: String(props.speed) + 's' }}></div>
-        <div className='model__rod' style={{ animationDuration: String(props.speed) + 's' }}></div>
-        <div className='model__crank-shaft' style={{ animationDuration: String(props.speed) + 's' }}>
+        <div className='model__piston'></div>
+        <div className='model__rod'></div>
+        <div className='model__crank-shaft'>
           <div className='model__crank-shaft-cut'></div>
         </div>
       </div>

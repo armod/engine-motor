@@ -2,18 +2,15 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import Ignition from '../components/Ignition'
 import Model from '../components/Model'
-import Panel from '../components/Panel'
 import Speedometer from '../components/Speedometer'
 import Tachomerter from '../components/Tachomerter'
 
 const Home = () => {
   const [speed, setSpeed] = useState(2)
-
+  document.documentElement.style.setProperty('--speed2', speed + 's')
   {
-    if (speed < 0) {
-      console.log(speed)
-      setSpeed(1)
-      console.log(speed)
+    if (speed <= 0) {
+      setSpeed(0.001)
     }
   }
   useEffect(() => {
@@ -29,23 +26,49 @@ const Home = () => {
         <Speedometer />
         <Tachomerter />
         {/* <Panel /> */}
-        <div>
-          <button
-            className='btn-up'
-            onClick={() => {
-              setSpeed(speed + 0.05)
-            }}
-          >
-            Up
-          </button>
-          <button
-            className='btn-dwon'
-            onClick={() => {
-              setSpeed(speed - 0.05)
-            }}
-          >
-            Down
-          </button>
+        <div className='panel'>
+          <div className='panel__wrapper'>
+            <button
+              className='btn'
+              onClick={() => {
+                setSpeed(speed - 0.05)
+              }}
+            >
+              faster
+            </button>
+            <button
+              className='btn'
+              onClick={() => {
+                setSpeed(speed + 0.05)
+              }}
+            >
+              slower
+            </button>
+            <button
+              className='btn'
+              onClick={() => {
+                setSpeed(0.2)
+              }}
+            >
+              set 0.20
+            </button>
+            <button
+              className='btn'
+              onClick={() => {
+                setSpeed(0.1)
+              }}
+            >
+              set 0.10
+            </button>
+            <button
+              className='btn'
+              onClick={() => {
+                setSpeed(1)
+              }}
+            >
+              set 1
+            </button>
+          </div>
         </div>
         <div className='ignition'>
           <Ignition />

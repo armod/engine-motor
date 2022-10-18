@@ -29,11 +29,29 @@
   grid-row: 2;
   border: 1px solid black;
 }
+*/
 .panel {
   grid-column: 4;
   grid-row: 1;
   border: 1px solid black;
-} */
+}
+
+.panel__wrapper {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+  background: linear-gradient(to right, red, blue);
+  color: #fff;
+}
+
 .ignition {
   grid-column: 4;
   grid-row: 2;
