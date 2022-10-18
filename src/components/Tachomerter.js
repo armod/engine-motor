@@ -1,7 +1,12 @@
-import React from 'react'
+import '../components/tachometer.scss'
 
 const Tachomerter = () => {
-  return <div>Engine Speed (Tachomerter)</div>
+  return (
+    <div className='tacho'>
+      <p>Engine Speed (Tachomerter)</p>
+      <div className='tacho__wheel'></div>
+    </div>
+  )
 }
 
 export default Tachomerter

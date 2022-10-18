@@ -1,14 +1,10 @@
-// ------ VARIABLES ------
-$speed: 5s;
-// ------ END VARIABLES ------
-
-.speed {
+.tacho {
   grid-column: 3;
-  grid-row: 1;
+  grid-row: 2;
   border: 1px solid black;
 }
 
-.speed__wheel {
+.tacho__wheel {
   position: relative;
   left: 50%;
   top: 50%;

@@ -1,0 +1,10 @@
+.panel {
+  grid-column: 4;
+  grid-row: 1;
+  border: 1px solid black;
+}
+
+.panel__buttons {
+  display: flex;
+  flex-direction: column;
+}
