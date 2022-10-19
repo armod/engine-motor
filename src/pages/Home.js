@@ -6,15 +6,15 @@ import Speedometer from '../components/Speedometer'
 import Tachomerter from '../components/Tachomerter'
 
 const Home = () => {
-  const [speed, setSpeed] = useState(2)
+  const [speed, setSpeed] = useState(40)
   document.documentElement.style.setProperty('--speed2', speed + 's')
-  {
-    if (speed <= 0) {
-      setSpeed(0.001)
-    }
+
+  if (speed <= 0) {
+    setSpeed(0.001)
   }
+
   useEffect(() => {
-    console.log('effect')
+    // console.log('effect')
   }, [])
   return (
     <>

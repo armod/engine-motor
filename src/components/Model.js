@@ -7,8 +7,6 @@ import '../components/model.scss'
 // timing chain - łańcuch rozrządu
 // crank shaft - wał korbowy
 const Model = (props) => {
-  console.log(typeof props.speed)
-  console.log(String(props.speed) + 's')
   return (
     <div className='model'>
       <p>Engine Model</p>

@@ -1,5 +1,6 @@
 // ------ VARIABLES ------
 $speed: 5s;
+$width: 5px;
 // ------ END VARIABLES ------
 
 .speed {
@@ -13,8 +14,42 @@ $speed: 5s;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background-color: #000;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%);
+}
+
+.speed__tick {
+  // position: absolute;
+  display: flex;
+  gap: 1px;
+}
+
+.tick {
+  transform-origin: bottom;
+  position: absolute;
+  background: linear-gradient(to top, black 90%, red 90%);
+  height: 140px;
+  width: 2px;
+  top: 10px;
+  left: 50%;
+  transform: rotate(var(--angle)) rotateZ(-127deg);
+}
+
+/* .tick::before {
+  border: 1px solid black;
+  position: absolute;
+  content: '';
+  // width: max-content;
+} */
+// .tick:nth-child(3) {
+//   transform: rotate(20deg) translateX(10px) translateY(-5px);
+// }
+@for $i from 0 to 20 {
+  .tick:nth-child(#{$i + 1}) {
+    --angle: #{360deg / 27 * $i};
+    --position: #;
+  }
 }

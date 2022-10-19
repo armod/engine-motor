@@ -7,7 +7,7 @@
 // crank shaft - wał korbowy
 
 // ------ VARIABLES ------
-$speed: 4s;
+$speed: 0s;
 // ------ END VARIABLES ------
 :root {
   --speed2: 3s;
@@ -31,13 +31,12 @@ $speed: 4s;
 // ------ BLOCK ------
 .model__block {
   position: absolute;
-  // z-index: 1;
   .b1 {
     position: absolute;
     background: brown;
     width: 20px;
     height: 200px;
-    left: -95px;
+    left: -94px;
     top: -220px;
   }
   .b2 {

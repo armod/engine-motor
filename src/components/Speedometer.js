@@ -4,7 +4,30 @@ const Speedometer = () => {
   return (
     <div className='speed'>
       <p>Vehicle Speed (Speedometer)</p>
-      <div className='speed__wheel'></div>
+      <div className='speed__wheel'>
+        <div className='speed__tick'>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+          <div className='tick'></div>
+        </div>
+      </div>
     </div>
   )
 }
