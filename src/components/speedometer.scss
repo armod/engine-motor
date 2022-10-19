@@ -22,7 +22,6 @@ $speed: 5s;
 }
 
 .speed__tick {
-  // position: absolute;
   display: flex;
   gap: 1px;
 }
@@ -36,12 +35,11 @@ $speed: 5s;
   top: 10px;
   left: 50%;
   transform: rotate(var(--angle)) rotateZ(-127deg);
-  // counter-reset: count 10;
   counter-increment: count 20;
 }
 .tick:nth-child(odd)::before {
   position: absolute;
-  content: counter(count) '';
+  content: attr(value) '';
   color: #fff;
   left: -8px;
   top: 20px;
