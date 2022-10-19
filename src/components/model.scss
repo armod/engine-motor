@@ -7,10 +7,10 @@
 // crank shaft - wał korbowy
 
 // ------ VARIABLES ------
-$speed: 0s;
+// $speed: 0s;
 // ------ END VARIABLES ------
 :root {
-  --speed2: 3s;
+  --speed: 3s;
 }
 
 .model {
@@ -59,7 +59,7 @@ $speed: 0s;
   width: 150px;
   height: 100px;
   background: red;
-  animation: animation-piston var(--speed2) linear infinite;
+  animation: animation-piston var(--speed) linear infinite;
 }
 
 @keyframes animation-piston {
@@ -82,7 +82,7 @@ $speed: 0s;
   height: 200px;
   top: -150px;
   background: blue;
-  animation: animation-rod var(--speed2) linear infinite;
+  animation: animation-rod var(--speed) linear infinite;
   //--------------FOR SET
   // transform: rotate(25deg);
   // margin-left: -80px;
@@ -123,7 +123,7 @@ $speed: 0s;
   //--------------FOR SET
   // transform: rotate(0deg);
   //--------------END FOR SET
-  animation: animation-crank-shaft var(--speed2) linear infinite;
+  animation: animation-crank-shaft var(--speed) linear infinite;
   &::before {
     content: '';
     width: 60px;

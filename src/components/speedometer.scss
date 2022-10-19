@@ -1,6 +1,6 @@
 // ------ VARIABLES ------
 $speed: 5s;
-$width: 5px;
+// $width: 5px;
 // ------ END VARIABLES ------
 
 .speed {
@@ -38,18 +38,33 @@ $width: 5px;
   transform: rotate(var(--angle)) rotateZ(-127deg);
 }
 
-/* .tick::before {
-  border: 1px solid black;
-  position: absolute;
-  content: '';
-  // width: max-content;
-} */
-// .tick:nth-child(3) {
-//   transform: rotate(20deg) translateX(10px) translateY(-5px);
-// }
 @for $i from 0 to 20 {
   .tick:nth-child(#{$i + 1}) {
     --angle: #{360deg / 27 * $i};
     --position: #;
+  }
+}
+
+.pointer {
+  position: relative;
+  background: yellow;
+  height: 200px;
+  width: 20px;
+  left: calc(50% - 10px);
+  top: 10px;
+  clip-path: polygon(9px 0, 11px 0, 20px 150px, 10px 200px, 0 150px);
+  transform-origin: 10px 140px;
+  animation: animate-pointer 4s ease-in-out infinite;
+}
+
+@keyframes animate-pointer {
+  0% {
+    transform: rotate(-130deg);
+  }
+  80% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(-130deg);
   }
 }

@@ -7,7 +7,7 @@ import Tachomerter from '../components/Tachomerter'
 
 const Home = () => {
   const [speed, setSpeed] = useState(40)
-  document.documentElement.style.setProperty('--speed2', speed + 's')
+  document.documentElement.style.setProperty('--speed', speed + 's')
 
   if (speed <= 0) {
     setSpeed(0.001)
