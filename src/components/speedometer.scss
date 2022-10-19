@@ -81,6 +81,16 @@
   border-radius: 50%;
 }
 
+.endpoint {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: grey;
+  top: 225px;
+  left: 235px;
+  border-radius: 50%;
+}
+
 @keyframes animate-pointer {
   0% {
     transform: rotate(-130deg);

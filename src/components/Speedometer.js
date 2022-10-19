@@ -28,6 +28,7 @@ const Speedometer = () => {
           <div className='tick' value='190'></div>
         </div>
         <div className='pointer'></div>
+        <div className='endpoint'></div>
       </div>
     </div>
   )
