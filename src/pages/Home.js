@@ -6,13 +6,19 @@ import Speedometer from '../components/Speedometer'
 import Tachomerter from '../components/Tachomerter'
 
 const Home = () => {
-  const [speed, setSpeed] = useState(40)
-  document.documentElement.style.setProperty('--speed', speed + 's')
+  const [speed, setSpeed] = useState(10)
+  document.documentElement.style.setProperty('--speed', 6 / speed + 's')
+  document.documentElement.style.setProperty('--angle-pointer', -128 + speed * 1.345 + 'deg')
 
-  if (speed <= 0) {
-    setSpeed(0.001)
+  if (speed < 0) {
+    setSpeed(1)
   }
 
+  const handler = (e) => {
+    e.preventDefault()
+    console.log('handler', e)
+    setSpeed(speed + 10)
+  }
   useEffect(() => {
     // console.log('effect')
   }, [])
@@ -31,7 +37,7 @@ const Home = () => {
             <button
               className='btn'
               onClick={() => {
-                setSpeed(speed - 0.05)
+                setSpeed(speed + 10)
               }}
             >
               faster
@@ -39,7 +45,7 @@ const Home = () => {
             <button
               className='btn'
               onClick={() => {
-                setSpeed(speed + 0.05)
+                setSpeed(speed - 10)
               }}
             >
               slower
@@ -47,18 +53,18 @@ const Home = () => {
             <button
               className='btn'
               onClick={() => {
-                setSpeed(0.2)
+                setSpeed(20)
               }}
             >
-              set 0.20
+              set 20
             </button>
             <button
               className='btn'
               onClick={() => {
-                setSpeed(0.1)
+                setSpeed(10)
               }}
             >
-              set 0.10
+              set 10
             </button>
             <button
               className='btn'
@@ -71,7 +77,7 @@ const Home = () => {
           </div>
         </div>
         <div className='ignition'>
-          <Ignition />
+          <Ignition props={speed} />
         </div>
       </main>
     </>
