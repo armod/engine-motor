@@ -69,16 +69,16 @@
   transition: all 0.5s ease-in-out;
   transform: rotate(var(--angle-pointer));
   // animation: animate-pointer var(--speed) ease-in-out infinite;
-}
-.pointer::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: gray;
-  top: 140px;
-  left: 5px;
-  border-radius: 50%;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(95, 236, 14);
+    top: 140px;
+    left: 5px;
+    border-radius: 50%;
+  }
 }
 
 .endpoint {
